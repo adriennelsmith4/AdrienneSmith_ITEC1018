@@ -1,0 +1,54 @@
+Exercise 6. Arrays
+Write a program in pseudocode that manages a list of product prices. The program should:
+• Declare an array capable of holding 10 real numbers (prices).
+• Use a loop to prompt the user to enter the 10 prices.
+• Find and display the highest price and the lowest price.
+• Calculate and display the average price.
+• Display all of the prices that are greater than the average.
+Submit your pseudocode in a text file.
+
+Constant Integer SIZE = 10
+Declare Real prices[SIZE]
+Declare Integer index
+Declare Real highest
+Declare Real lowest
+Declare Real total
+Declare Real average
+
+// Input
+For index = 0 To SIZE - 1
+    Display "Enter price ", index + 1, ": "
+    Input prices[index]
+Next index
+
+// Find highest, lowest, and total
+Set highest = prices[0]
+Set lowest = prices[0]
+Set total = 0
+
+For index = 0 To SIZE - 1
+    If prices[index] > highest Then
+        Set highest = prices[index]
+    End If
+
+    If prices[index] < lowest Then
+        Set lowest = prices[index]
+    End If
+
+    Set total = total + prices[index]
+Next index
+
+// Average
+Set average = total / SIZE
+
+// Output
+Display "Highest price: $", highest
+Display "Lowest price: $", lowest
+Display "Average price: $", average
+
+Display "Prices greater than the average:"
+For index = 0 To SIZE - 1
+    If prices[index] > average Then
+        Display "$", prices[index]
+    End If
+Next index

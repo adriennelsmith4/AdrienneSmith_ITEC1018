@@ -1,0 +1,36 @@
+Exercise 7. Files
+Write a program in pseudocode that processes a file of student names. Assume a text file named "classlist.txt" already exists and contains one student name per line.
+• Open the file and read the names (store them in an array if desired, or process them sequentially).
+• Count the total number of students in the file.
+• Create a new file named "roster.txt".
+• Write a header line "Class Roster" to the new file, followed by each student name converted to uppercase, one name per line.
+• Display the total number of students to the screen.
+Submit your pseudocode in a text file. (You do not need to create the actual files.)
+
+Declare InputFile classFile
+Declare OutputFile rosterFile
+Declare String studentName
+Declare Integer studentCount
+
+Set studentCount = 0
+
+// Open both files
+Open classFile "classlist.txt"
+Open rosterFile "roster.txt"
+
+// Write the header
+Write rosterFile "Class Roster"
+
+// Read each name, count it, and write it in uppercase
+While NOT EOF(classFile)
+    Read classFile studentName
+    Set studentCount = studentCount + 1
+    Write rosterFile ToUpper(studentName)
+End While
+
+// Close both files
+Close classFile
+Close rosterFile
+
+// Output
+Display "Total number of students: ", studentCount

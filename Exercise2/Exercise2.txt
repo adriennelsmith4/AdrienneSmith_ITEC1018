@@ -1,0 +1,32 @@
+Exercise 2. Decision Structures and Boolean Logic
+Write a program in pseudocode that determines whether a student qualifies for a scholarship. To qualify, the student must have a GPA of at least 3.5 AND either a SAT score of at least 1200 or an ACT score of at least 25. The program should:
+• Prompt the user for the GPA, SAT score, and ACT score.
+o Note: If the user did not take the SAT or the ACT, they should be told to enter a 0 as the score.
+• Use decision structures and Boolean logic to determine eligibility.
+• Display the entered scores and a message indicating whether the student qualifies or does not qualify.
+Submit your pseudocode in a text file.
+
+Declare Real gpa
+Declare Integer satScore
+Declare Integer actScore
+Constant Real MIN_GPA = 3.5
+Constant Integer MIN_SAT = 1200
+Constant Integer MIN_ACT = 25
+
+Display "Enter your GPA: "
+Input gpa
+Display "Enter your SAT score (enter 0 if you did not take the SAT): "
+Input satScore
+Display "Enter your ACT score (enter 0 if you did not take the ACT): "
+Input actScore
+
+Display "GPA: ", gpa
+Display "SAT score: ", satScore
+Display "ACT score: ", actScore
+
+If gpa >= MIN_GPA AND (satScore >= MIN_SAT OR actScore >= MIN_ACT) Then
+    Display "The student qualifies for the scholarship."
+Else
+    Display "The student does not qualify for the scholarship."
+End If
+

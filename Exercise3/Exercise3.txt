@@ -1,0 +1,38 @@
+Exercise 3. Repetition Structures
+Write a program in pseudocode that helps a teacher calculate the average score for a class. The program should:
+• Prompt the user for the number of students in the class.
+• Use a loop to prompt for each student's score (assume scores are between 0 and 100).
+• Calculate and display the average score.
+• Also count and display the number of students who scored 90 or above.
+Submit your pseudocode in a text file.
+
+Declare Integer numStudents
+Declare Integer counter
+Declare Real score
+Declare Real totalScore
+Declare Real averageScore
+Declare Integer countHighScores
+Constant Integer HIGH_SCORE = 90
+
+Set totalScore = 0
+Set countHighScores = 0
+
+Display "Enter the number of students: "
+Input numStudents
+
+For counter = 1 To numStudents
+    Display "Enter the score for student ", counter, ": "
+    Input score
+
+    Set totalScore = totalScore + score
+
+    If score >= HIGH_SCORE Then
+        Set countHighScores = countHighScores + 1
+    End If
+Next counter
+
+Set averageScore = totalScore / numStudents
+
+Display "The average score is: ", averageScore
+Display "Number of students who scored 90 or above: ", countHighScores
+

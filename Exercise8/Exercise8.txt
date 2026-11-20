@@ -1,0 +1,70 @@
+Exercise 8. Text Processing
+Write a program in pseudocode that analyzes a user-entered phrase. The program should:
+• Prompt the user to enter a sentence or phrase.
+• Count and display the number of characters in the phrase, excluding spaces.
+• Count and display the number of words in the phrase.
+• Determine whether the phrase is a palindrome when spaces are ignored and case is ignored (e.g., "Racecar" is a palindrome). Display a message indicating yes or no.
+o A palindrome is any word, number, phrase, name, or sequence of characters that reads the same backward as forward, ignoring spaces, punctuation, and capitalization.
+Submit your pseudocode in a text file.
+
+Declare String phrase
+Declare String cleaned
+Declare String reversed
+Declare String currentChar
+Declare Integer index
+Declare Integer charCount
+Declare Integer wordCount
+Declare Boolean inWord
+Declare Boolean isPalindrome
+
+Display "Enter a sentence or phrase: "
+Input phrase
+
+Set charCount = 0
+Set wordCount = 0
+Set inWord = False
+Set cleaned = ""
+
+// Process each character once
+For index = 0 To Length(phrase) - 1
+    Set currentChar = Substring(phrase, index, 1)
+
+    If currentChar != " " Then
+        // Count non-space characters
+        Set charCount = charCount + 1
+
+        // Build the cleaned string (lowercase, no spaces)
+        Set cleaned = cleaned + ToLower(currentChar)
+
+        // A non-space after a space (or at the start) begins a new word
+        If inWord == False Then
+            Set wordCount = wordCount + 1
+            Set inWord = True
+        End If
+    Else
+        Set inWord = False
+    End If
+Next index
+
+// Build the reversed string
+Set reversed = ""
+For index = Length(cleaned) - 1 To 0 Step -1
+    Set reversed = reversed + Substring(cleaned, index, 1)
+Next index
+
+// Compare
+If cleaned == reversed Then
+    Set isPalindrome = True
+Else
+    Set isPalindrome = False
+End If
+
+// Output
+Display "Characters (excluding spaces): ", charCount
+Display "Number of words: ", wordCount
+
+If isPalindrome Then
+    Display "The phrase is a palindrome."
+Else
+    Display "The phrase is not a palindrome."
+End If

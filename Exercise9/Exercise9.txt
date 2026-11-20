@@ -1,0 +1,80 @@
+Exercise 9. Object-Oriented Programming
+Design an object-oriented solution for a simple InventoryItem class. The class should include:
+• Attributes: itemName (string), quantity (integer), price (real number).
+• A constructor that accepts and initializes the three attributes.
+• Accessor methods (getters) for each attribute.
+• A mutator method (setter) for quantity.
+• A method named calculateValue that returns the total value (quantity × price).
+• A method named displayItem that displays the item name, quantity, price, and calculated value.
+Write the pseudocode for the InventoryItem class. Then write a main program (or module) that:
+• Creates two InventoryItem objects with sample data.
+• Calls displayItem on each.
+• Changes the quantity of one item and displays it again.
+In addition, draw a class diagram for the InventoryItem class using draw.io. (See the Chapter 14 Slides for an exam of a class diagram.) Export the diagram as a PNG, JPEG, or PDF and upload it along with your pseudocode.
+
+Class InventoryItem
+
+    // Attributes (private)
+    Private String itemName
+    Private Integer quantity
+    Private Real price
+
+    // Constructor
+    Public Module Constructor(String name, Integer qty, Real cost)
+        Set itemName = name
+        Set quantity = qty
+        Set price = cost
+    End Module
+
+    // Accessors (getters)
+    Public Function String getItemName()
+        Return itemName
+    End Function
+
+    Public Function Integer getQuantity()
+        Return quantity
+    End Function
+
+    Public Function Real getPrice()
+        Return price
+    End Function
+
+    // Mutator (setter) for quantity
+    Public Module setQuantity(Integer qty)
+        Set quantity = qty
+    End Module
+
+    // Calculates total value
+    Public Function Real calculateValue()
+        Return quantity * price
+    End Function
+
+    // Displays all information
+    Public Module displayItem()
+        Display "Item: ", itemName
+        Display "Quantity: ", quantity
+        Display "Price: $", Format(price, 2 decimal places)
+        Display "Total value: $", Format(calculateValue(), 2 decimal places)
+    End Module
+
+End Class
+
+Main Program
+
+Module main()
+    Declare InventoryItem item1
+    Declare InventoryItem item2
+
+    // Create two objects with sample data
+    Set item1 = New InventoryItem("Notebook", 50, 2.99)
+    Set item2 = New InventoryItem("Desk Lamp", 12, 24.50)
+
+    // Display both items
+    Call item1.displayItem()
+    Call item2.displayItem()
+
+    // Change one quantity and display again
+    Call item1.setQuantity(75)
+    Display "After updating the quantity:"
+    Call item1.displayItem()
+End Module

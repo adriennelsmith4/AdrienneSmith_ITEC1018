@@ -1,0 +1,49 @@
+Exercise 4. Modules and Functions
+Design a modular program that calculates the monthly payment on a loan. Create the following modules/functions:
+• A main module that calls the others and controls the flow.
+• A module to get the loan amount, annual interest rate (as a percent), and number of years from the user.
+• A function that calculates the monthly payment. You may use the standard loan payment formula (Google this!) or describe the calculation steps. The monthly interest rate is the annual rate divided by 12, and the number of payments is years × 12.
+• A module to display the monthly payment formatted as currency.
+In addition to your pseudocode, draw a hierarchy chart showing the relationship between the modules. (See the Chapter 5 slides if you forgot what that is!) Create the chart in draw.io and export it as a PNG, JPEG, or PDF. Upload both the pseudocode and the hierarchy chart to your GitHub repository.
+
+Module main()
+    Declare Real loanAmount
+    Declare Real annualRate
+    Declare Integer years
+    Declare Real monthlyPayment
+
+    Call getInput(loanAmount, annualRate, years)
+    Set monthlyPayment = calculatePayment(loanAmount, annualRate, years)
+    Call displayPayment(monthlyPayment)
+End Module
+
+Module getInput(Real Ref loanAmount, Real Ref annualRate, Integer Ref years)
+    Display "Enter the loan amount: "
+    Input loanAmount
+    Display "Enter the annual interest rate (as a percent, e.g. 6 for 6%): "
+    Input annualRate
+    Display "Enter the number of years: "
+    Input years
+End Module
+
+Function Real calculatePayment(Real loanAmount, Real annualRate, Integer years)
+    Declare Real monthlyRate
+    Declare Integer numPayments
+    Declare Real payment
+
+    Set monthlyRate = annualRate / 100 / 12
+    Set numPayments = years * 12
+
+    If monthlyRate == 0 Then
+        Set payment = loanAmount / numPayments
+    Else
+        Set payment = loanAmount * monthlyRate * (1 + monthlyRate) ^ numPayments /
+                      ((1 + monthlyRate) ^ numPayments - 1)
+    End If
+
+    Return payment
+End Function
+
+Module displayPayment(Real payment)
+    Display "Your monthly payment is: $", Format(payment, 2 decimal places)
+End Module

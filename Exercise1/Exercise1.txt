@@ -1,0 +1,29 @@
+Exercise 1. Input, Processing, and Output
+Write a program in pseudocode that calculates the total cost of items purchased at a store. The program should:
+• Prompt the user for the number of items.
+• Prompt the user for the price per item.
+• Calculate the subtotal (number of items × price per item).
+• Calculate the sales tax (8% of the subtotal).
+• Calculate the total (subtotal + sales tax).
+• Display the subtotal, sales tax amount, and total, formatted as currency (e.g., with two decimal places).
+Submit your pseudocode in a text file.
+
+Declare Integer itemNumber
+Declare Real itemPrice
+Declare Real subTotal
+Declare Real salesTax
+Declare Real totalAmount
+Constant Real TAX_RATE = 0.08
+
+Display "Enter the number of items: "
+Input itemNumber
+Display "Enter the item price: "
+Input itemPrice
+
+Set subTotal = itemNumber * itemPrice
+Set salesTax = subTotal * TAX_RATE
+Set totalAmount = subTotal + salesTax
+
+Display "The subtotal is: $", subTotal
+Display "The sales tax amount is: $", salesTax
+Display "The total amount is: $", totalAmount

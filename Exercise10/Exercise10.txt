@@ -1,0 +1,103 @@
+Exercise 10. Menu-Driven Program
+Write a menu-driven program in pseudocode that allows a user to calculate the areas of different shapes. The program should display a menu with the following options:
+1. Calculate the area of a circle (prompt for the radius; use π ≈ 3.14159).
+2. Calculate the area of a rectangle (prompt for length and width).
+3. Calculate the area of a triangle (prompt for base and height).
+4. Exit the program.
+Use a loop so that the menu continues to display until the user chooses to exit. Validate that the user enters a valid menu choice (1–4). You should use modules and/or functions for the individual calculations to keep your code tidy.
+Submit your pseudocode in a text file.
+
+Module main()
+    Declare Integer choice
+
+    Set choice = 0
+
+    While choice != 4
+        Call displayMenu()
+        Set choice = getMenuChoice()
+
+        Select choice
+            Case 1
+                Call circleOption()
+            Case 2
+                Call rectangleOption()
+            Case 3
+                Call triangleOption()
+            Case 4
+                Display "Goodbye!"
+        End Select
+    End While
+End Module
+
+Module displayMenu()
+    Display ""
+    Display "===== Area Calculator ====="
+    Display "1. Area of a circle"
+    Display "2. Area of a rectangle"
+    Display "3. Area of a triangle"
+    Display "4. Exit"
+End Module
+
+Function Integer getMenuChoice()
+    Declare Integer userChoice
+
+    Display "Enter your choice (1-4): "
+    Input userChoice
+
+    While userChoice < 1 OR userChoice > 4
+        Display "Invalid choice. Please enter a number from 1 to 4."
+        Display "Enter your choice (1-4): "
+        Input userChoice
+    End While
+
+    Return userChoice
+End Function
+
+Module circleOption()
+    Declare Real radius
+    Declare Real area
+
+    Display "Enter the radius: "
+    Input radius
+    Set area = circleArea(radius)
+    Display "The area of the circle is: ", Format(area, 2 decimal places)
+End Module
+
+Module rectangleOption()
+    Declare Real length
+    Declare Real width
+    Declare Real area
+
+    Display "Enter the length: "
+    Input length
+    Display "Enter the width: "
+    Input width
+    Set area = rectangleArea(length, width)
+    Display "The area of the rectangle is: ", Format(area, 2 decimal places)
+End Module
+
+Module triangleOption()
+    Declare Real base
+    Declare Real height
+    Declare Real area
+
+    Display "Enter the base: "
+    Input base
+    Display "Enter the height: "
+    Input height
+    Set area = triangleArea(base, height)
+    Display "The area of the triangle is: ", Format(area, 2 decimal places)
+End Module
+
+Function Real circleArea(Real radius)
+    Constant Real PI = 3.14159
+    Return PI * radius * radius
+End Function
+
+Function Real rectangleArea(Real length, Real width)
+    Return length * width
+End Function
+
+Function Real triangleArea(Real base, Real height)
+    Return 0.5 * base * height
+End Function

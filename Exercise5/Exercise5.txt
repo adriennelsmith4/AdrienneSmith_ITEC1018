@@ -1,0 +1,18 @@
+Exercise 5. Input Validation
+Write a program in pseudocode that asks the user to enter a valid course number. A valid course number must be an integer between 1000 and 9999 (inclusive) and must be even. Use a validation loop to repeatedly prompt the user until a valid course number is entered. Once a valid number is entered, display a confirmation message that includes the course number.
+Submit your pseudocode in a text file.
+
+Declare Integer courseNumber
+Constant Integer MIN_COURSE = 1000
+Constant Integer MAX_COURSE = 9999
+
+Display "Enter a course number (an even number between 1000 to 9999): "
+Input courseNumber
+
+While courseNumber < MIN_COURSE OR courseNumber > MAX_COURSE OR courseNumber MOD 2 != 0
+    Display "Invalid course number. It must be even and between 1000 and 9999."
+    Display "Enter a course number: "
+    Input courseNumber
+End While
+
+Display "Course number ", courseNumber, " has been accepted."
