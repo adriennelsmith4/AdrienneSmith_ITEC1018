@@ -3,8 +3,10 @@ Write a program in pseudocode that analyzes a user-entered phrase. The program s
 • Prompt the user to enter a sentence or phrase.
 • Count and display the number of characters in the phrase, excluding spaces.
 • Count and display the number of words in the phrase.
-• Determine whether the phrase is a palindrome when spaces are ignored and case is ignored (e.g., "Racecar" is a palindrome). Display a message indicating yes or no.
-o A palindrome is any word, number, phrase, name, or sequence of characters that reads the same backward as forward, ignoring spaces, punctuation, and capitalization.
+• Determine whether the phrase is a palindrome when spaces are ignored and case is ignored (e.g., "Racecar" is a palindrome). 
+Display a message indicating yes or no.
+o A palindrome is any word, number, phrase, name, or sequence of characters that reads the same backward as forward, 
+ignoring spaces, punctuation, and capitalization.
 Submit your pseudocode in a text file.
 
 Declare String phrase

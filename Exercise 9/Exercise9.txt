@@ -10,7 +10,8 @@ Write the pseudocode for the InventoryItem class. Then write a main program (or 
 • Creates two InventoryItem objects with sample data.
 • Calls displayItem on each.
 • Changes the quantity of one item and displays it again.
-In addition, draw a class diagram for the InventoryItem class using draw.io. (See the Chapter 14 Slides for an exam of a class diagram.) Export the diagram as a PNG, JPEG, or PDF and upload it along with your pseudocode.
+In addition, draw a class diagram for the InventoryItem class using draw.io. (See the Chapter 14 Slides for an exam of a class diagram.) 
+Export the diagram as a PNG, JPEG, or PDF and upload it along with your pseudocode.
 
 Class InventoryItem
 

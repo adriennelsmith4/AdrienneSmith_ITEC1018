@@ -1,5 +1,6 @@
 Exercise 7. Files
-Write a program in pseudocode that processes a file of student names. Assume a text file named "classlist.txt" already exists and contains one student name per line.
+Write a program in pseudocode that processes a file of student names. Assume a text file named "classlist.txt" already exists 
+and contains one student name per line.
 • Open the file and read the names (store them in an array if desired, or process them sequentially).
 • Count the total number of students in the file.
 • Create a new file named "roster.txt".

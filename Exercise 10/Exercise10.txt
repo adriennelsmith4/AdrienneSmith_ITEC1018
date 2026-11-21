@@ -1,10 +1,13 @@
 Exercise 10. Menu-Driven Program
-Write a menu-driven program in pseudocode that allows a user to calculate the areas of different shapes. The program should display a menu with the following options:
+Write a menu-driven program in pseudocode that allows a user to calculate the areas of different shapes. 
+The program should display a menu with the following options:
 1. Calculate the area of a circle (prompt for the radius; use π ≈ 3.14159).
 2. Calculate the area of a rectangle (prompt for length and width).
 3. Calculate the area of a triangle (prompt for base and height).
 4. Exit the program.
-Use a loop so that the menu continues to display until the user chooses to exit. Validate that the user enters a valid menu choice (1–4). You should use modules and/or functions for the individual calculations to keep your code tidy.
+Use a loop so that the menu continues to display until the user chooses to exit. 
+Validate that the user enters a valid menu choice (1–4). You should use modules and/or functions 
+for the individual calculations to keep your code tidy.
 Submit your pseudocode in a text file.
 
 Module main()
