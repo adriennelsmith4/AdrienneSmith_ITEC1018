@@ -38,7 +38,7 @@ Function Real calculatePayment(Real loanAmount, Real annualRate, Integer years)
         Set payment = loanAmount / numPayments
     Else
         Set payment = loanAmount * monthlyRate * (1 + monthlyRate) ^ numPayments /
-                      ((1 + monthlyRate) ^ numPayments - 1)
+            ((1 + monthlyRate) ^ numPayments - 1)
     End If
 
     Return payment
